@@ -14,6 +14,7 @@ async fn main() -> Result<(), Error> {
         .with_target(false)
         .with_ansi(false)
         .with_current_span(false)
+        .with_span_list(false)
         .without_time()
         .init();
     let func = service_fn(func);
