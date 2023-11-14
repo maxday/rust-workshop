@@ -23,7 +23,7 @@ async fn main() -> Result<(), Error> {
 }
 
 async fn func(event: LambdaEvent<Value>) -> Result<Response, Error> {
-    tracing::info!("event: {:?}", event);
+    tracing::info!("event: {:?}", event.payload);
     Ok(Response {
         message: serde_json::to_string(&event.payload)?.to_string(),
     })
